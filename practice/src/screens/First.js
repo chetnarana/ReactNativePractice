@@ -1,6 +1,6 @@
 import { View, Text, Button, Alert, TextInput, Pressable, Switch } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import Name from '../component/Name'
+
 
 const First = () => {
 
@@ -9,12 +9,12 @@ const First = () => {
     const [age, setAge] = useState('')
     const [toggle, setToggle] = useState(false)
 
-    // useEffect(() => {
-    //     Alert.alert('Count Changed')
-    // }, [count])
+    useEffect(() => {
+        Alert.alert('Count Changed')
+    }, [count])
     return (
         <View>
-            <Name name={'Anjali'} />
+           
             <Text>{count}</Text>
             <Button onPress={() => setCount(count + 1)} title='Increment' />
             <Button onPress={() => setCount(count - 1)} title='Decrement' />
