@@ -1,10 +1,4 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  SafeAreaView,
-  FlatList,
-} from 'react-native';
+import {View,Text,TouchableOpacity,SafeAreaView,FlatList,} from 'react-native';
 import React from 'react';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';

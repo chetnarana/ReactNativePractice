@@ -7,7 +7,7 @@ const UserProfileImage = props => {
   return (
     <View>
       <View style={style.userImageContainer}>
-        <Image style={{height: 50, width: 50}} source={props.profileImage} />
+        <Image style={style.image} source={props.profileImage} />
       </View>
     </View>
   );

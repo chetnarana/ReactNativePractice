@@ -9,16 +9,17 @@ import {
   faHeart,
   faMessage,
 } from '@fortawesome/free-solid-svg-icons';
+import style from './style';
 
 const UserPost = props => {
   return (
     <SafeAreaView>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+      <View style={style.postContainer}>
         <UserProfileImage
           profileImage={props.profileImage}
           imageDimension={48}
         />
-        <View style={{justifyContent: 'center', marginLeft: 10}}>
+        <View style={style.postHeader}>
           <Text>
             {props.firstName} {props.lastName}
           </Text>
@@ -28,29 +29,23 @@ const UserPost = props => {
       </View>
       <View>
         <Image
-          style={{
-            height: 300,
-            width: '100%',
-            borderRadius: 20,
-            margin: 10,
-            marginRight: 50,
-          }}
+          style={style.postImage}
           source={props.profile}
         />
       </View>
-      <View style={{flexDirection: 'row', marginLeft: 10}}>
+      <View style={style.postFooter}>
         <View style={{flexDirection: 'row'}}>
           <FontAwesomeIcon icon={faHeart} />
-          <Text style={{marginLeft: 3}}>{props.likes}</Text>
+          <Text style={style.postText}>{props.likes}</Text>
         </View>
-        <View style={{flexDirection: 'row', marginLeft: 10}}>
+        <View style={style.postFooter}>
           <FontAwesomeIcon icon={faMessage} />
-          <Text style={{marginLeft: 3}}>{props.comments}</Text>
+          <Text style={style.postText}>{props.comments}</Text>
         </View>
 
-        <View style={{flexDirection: 'row', marginLeft: 10}}>
+        <View style={style.postFooter}>
           <FontAwesomeIcon icon={faBookBookmark} />
-          <Text style={{marginLeft: 3}}>{props.bookmark}</Text>
+          <Text style={style.postText}>{props.bookmark}</Text>
         </View>
       </View>
     </SafeAreaView>
